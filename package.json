@@ -1,0 +1,23 @@
+{
+  "name": "wait-web-could-do-that",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve src -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashantpalikhe/wait-web-could-do-that.git"
+  },
+  "keywords": [],
+  "author": "Prashant <prashpal09@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashantpalikhe/wait-web-could-do-that/issues"
+  },
+  "homepage": "https://github.com/prashantpalikhe/wait-web-could-do-that#readme",
+  "devDependencies": {
+    "serve": "^6.1.0"
+  }
+}
