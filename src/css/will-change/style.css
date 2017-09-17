@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+    transform: translate3d(-300px, 0, 0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-item {
+    padding: 0 20px;
+    height: 45px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+header {
+    background-color: rgb(234, 31, 98);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+button {
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.cards {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
+    position: relative;
+    border-radius: 2px;
+    width: 80vw;
+    color: white;
+    padding: 20px;
+    margin-bottom:20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.card:nth-child(1) {
+    background-color: #455a64;
+}
+
+.card:nth-child(2) {
+    background-color: #0097a7;
+}
+
+.card:nth-child(3) {
+    background-color: #9c27b0;
+}
+
+.card-info {
+    flex: 2;
+    max-width: 66%;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+}
+
+.card-image {
+    margin-left: auto;
+}
+
+.card-action {
+    margin-top: 20px;
+}
+
+
+img {
+    width: 100px;
+}
