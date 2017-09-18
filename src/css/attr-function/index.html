@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CSS custom properties</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<p id="textHolder" data-before-text="This is my cool before text!">
+    Unfortunately not browser supports anything other than content on the CSS attr function
+</p>
+
+<style>
+    #textHolder::before {
+        content: attr(data-before-text);
+        color: red;
+        display: block;
+    }
+</style>
+
+</body>
+
+</html>

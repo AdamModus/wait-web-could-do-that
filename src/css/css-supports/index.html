@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CSS custom properties</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div>
+    Lorem Ipsum dolor
+</div>
+
+<style>
+    @supports (display: flex) {
+        div {
+            display: flex;
+        }
+    }
+
+    @supports not (display: flex) {
+        div {
+            float: right;
+        }
+    }
+</style>
+
+<script>
+    console.log(CSS.supports("text-decoration-style", "blink"));
+    console.log(CSS.supports("display", "flex"));
+    console.log(CSS.supports('--foo', 'red'));
+    console.log(CSS.supports('(--foo: red)'));
+
+    console.log(CSS.supports("( transform-origin: 5% 5% )"));
+    console.log(CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: preserve ) or ( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve )"));
+</script>
+
+</body>
+
+</html>
