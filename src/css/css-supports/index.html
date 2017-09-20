@@ -11,32 +11,55 @@
 
 <body>
 
-<div>
-    Lorem Ipsum dolor
+<div id="main">
+    <div style="background-color:coral;">This is a RED div</div>
+    <div style="background-color:lightblue;">This is a BLUE div</div>
+    <div style="background-color:lightgreen;">This is a GREEN div</div>
 </div>
 
 <style>
     @supports (display: flex) {
-        div {
+        #main {
+            width: 100%;
+            height: 50%;
+            border: 1px solid black;
             display: flex;
+        }
+
+        #main div {
+            flex: 1;
         }
     }
 
     @supports not (display: flex) {
+        #main {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+        }
+
         div {
             float: right;
         }
     }
 </style>
 
-<script>
-    console.log(CSS.supports("text-decoration-style", "blink"));
-    console.log(CSS.supports("display", "flex"));
-    console.log(CSS.supports('--foo', 'red'));
-    console.log(CSS.supports('(--foo: red)'));
+<div class="wrapper">
+    <div class="flex">
+        <span>CSS.supports("display", "flex") = </span> <span class="answer"></span>
+    </div>
+    <div class="color">
+        <span>CSS.supports("color: coral") = </span> <span class="answer"></span>
+    </div>
+    <div class="falsy">
+        <span>CSS.supports("color: bananas") = </span> <span class="answer"></span>
+    </div>
+</div>
 
-    console.log(CSS.supports("( transform-origin: 5% 5% )"));
-    console.log(CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: preserve ) or ( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve )"));
+<script>
+    document.querySelector('.flex .answer').innerHTML = CSS.supports("display", "flex");
+    document.querySelector('.color .answer').innerHTML = CSS.supports("color: coral");
+    document.querySelector('.falsy .answer').innerHTML = CSS.supports("color: bananas");
 </script>
 
 </body>
