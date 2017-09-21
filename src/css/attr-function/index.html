@@ -11,8 +11,8 @@
 
 <body>
 
-<p id="textHolder" data-before-text="This is my cool before text!">
-    Unfortunately not browser supports anything other than content on the CSS attr function
+<p id="textHolder" data-before-text="This is my custom attribute text!">
+    Unfortunately not every browser supports anything other than content on the CSS attr function
 </p>
 
 <style>
@@ -20,12 +20,19 @@
         margin: 0;
         padding: 0;
         font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+    }
+
+    #textHolder {
+        color: whitesmoke;
     }
 
     #textHolder::before {
         content: attr(data-before-text);
         color: red;
         display: block;
+        margin-bottom: 1rem;
+        color: #D42C66;
     }
 </style>
 
