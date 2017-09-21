@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CSS custom properties</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<header>
+</header>
+
+<div id="mainWrapper">
+    <div id="main">
+        <div>NUMBER
+            <div>1</div>
+        </div>
+        <div>NUMBER
+            <div>2</div>
+        </div>
+        <div>NUMBER
+            <div>3</div>
+        </div>
+        <div>NUMBER
+            <div>4</div>
+        </div>
+        <div>NUMBER
+            <div>5</div>
+        </div>
+        <div>NUMBER
+            <div>6</div>
+        </div>
+        <div>NUMBER
+            <div>7</div>
+        </div>
+        <div>NUMBER
+            <div>8</div>
+        </div>
+        <div>NUMBER
+            <div>9</div>
+        </div>
+        <div>NUMBER
+            <div>10</div>
+        </div>
+        <div>NUMBER
+            <div>11</div>
+        </div>
+        <div>NUMBER
+            <div>12</div>
+        </div>
+        <div>NUMBER
+            <div>13</div>
+        </div>
+        <div>NUMBER
+            <div>14</div>
+        </div>
+        <div>NUMBER
+            <div>15</div>
+        </div>
+        <div>NUMBER
+            <div>16</div>
+        </div>
+        <div>NUMBER
+            <div>17</div>
+        </div>
+        <div>NUMBER
+            <div>18</div>
+        </div>
+        <div>NUMBER
+            <div>19</div>
+        </div>
+        <div>NUMBER
+            <div>20</div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header {
+        background-color: #2196f3;
+        height: 120px;
+        padding: 20px;
+        color: white;
+        font-size: 26px;
+    }
+
+    #mainWrapper {
+        position: relative;
+        top: -55px;
+        border-radius: 2px;
+        width: 80vw;
+        margin: 0 auto;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+        background: white;
+        display: flow-root;
+    }
+
+    #main {
+        width: 100%;
+        height: 60%;
+        border: 1px solid white;
+        display: flex;
+    }
+
+    #main div {
+        flex: 1;
+        background-color: lightblue;
+        border: 1px solid whitesmoke;
+    }
+
+    #main > div > div {
+        border-left: none;
+        border-right: none;
+        text-align: center;
+    }
+
+    #main div.selected {
+        background-color: coral;
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #f54336;
+        color: white;
+        border: none;
+        outline: none;
+        margin: 20px;
+    }
+
+    .textdiv {
+        text-align: center;
+    }
+
+</style>
+
+<div class="button-wrapper">
+    <button onclick="clearSelection()">Clear selection</button>
+    <button onclick="select('#main > div');">Select all</button>
+    <button onclick="select('#main > div:nth-child(5)');">Select number 5</button>
+    <button onclick="select('#main > div:nth-child(3n)');">Select multiples of 3</button>
+    <button onclick="select('#main > div:nth-last-child(-n+5)');">Select last 5</button>
+    <button onclick="select('#main > div:nth-child(odd)');">Select odd numbers</button>
+    <button onclick="select('#main > div:nth-child(3n):nth-child(even)');">Select all even multiples of three</button>
+</div>
+<div class="textdiv"></div>
+
+<script>
+
+    function clearSelection() {
+        [...document.querySelectorAll('#main div')].map((item) => {
+            item.className = '';
+        });
+        document.querySelector('.textdiv').innerHTML = '';
+    }
+
+    function select(selector) {
+        clearSelection();
+        [...document.querySelectorAll(selector)].map((item) => {
+            item.className = 'selected';
+        });
+        document.querySelector('.textdiv').innerHTML = selector;
+    }
+
+</script>
+
+</body>
+
+</html>

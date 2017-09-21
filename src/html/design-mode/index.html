@@ -34,13 +34,21 @@
 
 <script>
     function myFunc() {
-        if(document.designMode === 'on') {
+        if (document.designMode === 'on') {
             document.designMode = '';
         } else {
             document.designMode = 'on';
         }
     }
 </script>
+
+<style>
+    body {
+        margin: 0;
+        padding: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+</style>
 
 </body>
 
