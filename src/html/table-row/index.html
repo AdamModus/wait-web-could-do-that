@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>HTML Tables</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+        header {
+            background-color: #2196f3;
+            height: 150px;
+            padding: 20px;
+            color: white;
+            font-size: 26px;
+        }
+
+        #main {
+            position: relative;
+            top: -55px;
+            border-radius: 2px;
+            width: 80vw;
+            height: 80%;
+            margin: 0 auto;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+            background: white;
+            display: flow-root;
+        }
+
+        .main-table {
+            width: calc(100% - 20px);
+            margin: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+            border-collapse: collapse;
+        }
+
+        .main-table tr,
+        .main-table th,
+        .main-table td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>HTML Tables!</p>
+    </header>
+
+    <div id="main">
+        <table class="main-table">
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+            <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+            <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

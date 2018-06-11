@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CSS Blend</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+        }
+
+        header {
+            background-color: #2196f3;
+            height: 150px;
+            padding: 20px;
+            color: white;
+            font-size: 26px;
+        }
+
+        #main {
+            position: relative;
+            top: -55px;
+            border-radius: 2px;
+            width: 80vw;
+            height: 80%;
+            margin: 0 auto;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+            background: white;
+            display: flow-root;
+        }
+
+        .css-blend {
+            height: 200px;
+            width: calc((80vw/3) - 9px);
+            margin: 3px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-flex;
+        }
+
+        .just-color {
+            background-color: red;
+        }
+
+        .banana {
+            background-image: url('../../assets/img/banana.jpg');
+        }
+
+        .banana-blend {
+            background-color: red;
+            background-image: url('../../assets/img/banana.jpg');
+            background-blend-mode: hard-light;
+        }
+
+        .banana-title {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: -0.85rem;
+        }
+
+        .banana-title>span {
+            mix-blend-mode: multiply;
+        }
+
+        .banana-title>span:nth-child(odd) {
+            color: red;
+        }
+
+        .banana-title>span:nth-child(even) {
+            color: #2196f3
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>CSS BLEND</p>
+    </header>
+
+    <div id="main">
+        <div class="css-blend just-color">
+        </div>
+
+        <div class="css-blend banana">
+        </div>
+
+        <div class="css-blend banana-blend">
+        </div>
+
+        <div class="css-blend">
+            Red Background
+        </div>
+
+        <div class="css-blend">
+            Banana Background
+        </div>
+
+        <div class="css-blend">
+            Banana + Red <br> Background blend mode: hard-light
+        </div>
+
+        <h1>But wait, there's more! mix-blend-mode!</h1>
+
+        <h1 class="banana-title">
+            <span>B</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>N</span>
+            <span>A</span>
+            <span>!</span>
+        </h1>
+        <h1 class="banana-title">
+            <span>B</span>
+            <span>A</span>
+            <span>T</span>
+            <span>M</span>
+            <span>A</span>
+            <span>A</span>
+            <span>A</span>
+            <span>A</span>
+            <span>N</span>
+            <span>!</span>
+        </h1>
+
+    </div>
+</body>
+
+</html>
