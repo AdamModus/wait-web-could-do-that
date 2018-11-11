@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/AdamModus/wait-web-could-do-that/blob/master/README.md",
   "devDependencies": {
-    "serve": "^9.1.0"
+    "serve": "^10.0.2"
   }
 }

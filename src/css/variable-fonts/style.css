@@ -1,0 +1,51 @@
+/* Chrome only people! */
+
+@font-face {
+  font-family: "Decovar Regular24";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+}
+
+h1 {
+  margin: 0;
+  font-size: 20rem;
+  position: relative;
+
+  /* Variable font */
+  font-family: "Decovar Regular24";
+  font-variation-settings: "INLN" 1000, "SWRM" 1000;
+
+  /* Background clip to image */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(/src/assets/img/grass.jpg);
+  background-size: 30%;
+  background-repeat: repeat;
+
+  text-shadow: 2px 2px 5px rgba(#2a4308, 0.4);
+  animation: grow 4s linear infinite;
+}
+
+@keyframes grow {
+  0% {
+    font-variation-settings: "INLN" 1000, "SWRM" 1000;
+  }
+
+  50% {
+    font-variation-settings: "INLN" 1000, "SWRM" 0;
+  }
+}
+
+/* Positioning */
+body {
+  background: radial-gradient(ellipse at center, #adbf41 20%, #328a26 80%);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+}
