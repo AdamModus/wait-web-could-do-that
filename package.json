@@ -24,7 +24,7 @@
     "url": "https://github.com/AdamModus/wait-web-could-do-that/issues"
   },
   "homepage": "https://github.com/AdamModus/wait-web-could-do-that/blob/master/README.md",
-  "devDependencies": {
+  "dependencies": {
     "serve": "^10.0.2"
   }
 }
