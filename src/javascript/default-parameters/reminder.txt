@@ -1,0 +1,10 @@
+var def = {
+a : 1,
+b : 2
+}
+
+function funny (a = 5, b = def) {
+   console.log(a, b);
+}
+
+
